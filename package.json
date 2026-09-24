@@ -20,9 +20,16 @@
     "tui.js"
   ],
   "keywords": [
+    "auto-rename",
+    "cli",
+    "keybind",
+    "keyboard-shortcut",
     "opencode",
     "opencode-plugin",
-    "session"
+    "rename",
+    "session",
+    "session-title",
+    "tui"
   ],
   "scripts": {
     "test": "node --test"
