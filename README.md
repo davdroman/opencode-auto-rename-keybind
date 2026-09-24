@@ -29,9 +29,9 @@ Press **Ctrl+R** to auto-rename the current session. The shortcut is inactive wh
 
 ## Configuration
 
-Set `options.keybind` to a shortcut string supported by OpenCode, such as `ctrl+r` or `ctrl+shift+r`. If you choose a different shortcut, you can keep OpenCode's manual rename binding.
+`options.keybind` is required and must be a non-empty shortcut string supported by OpenCode, such as `ctrl+r` or `ctrl+shift+r`. If you choose a different shortcut, you can keep OpenCode's manual rename binding.
 
-No shortcut is assigned by default. Omit `keybind` or set it to `false` to disable the shortcut. Configure it through the plugin's options, not as a custom entry under `keybinds`.
+Configure the shortcut through the plugin's options, not as a custom entry under `keybinds`. To disable the plugin, remove its entry from `plugins` or add `"-auto-rename"` after it, using OpenCode's built-in plugin controls.
 
 ## License
 

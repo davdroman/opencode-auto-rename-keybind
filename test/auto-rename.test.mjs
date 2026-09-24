@@ -17,7 +17,7 @@ const hooks = registerHooks({
 const { default: plugin } = await import("opencode-auto-rename-keybind/tui");
 hooks.deregister();
 
-function setup(options = {}) {
+function setup(options = { keybind: "ctrl+r" }) {
   let route = { type: "session", sessionID: "ses_first" };
   let layer;
   let slot;
@@ -45,9 +45,9 @@ function setup(options = {}) {
   return { action: layer.commands[0], layer, calls, navigate: (next) => { route = next; } };
 }
 
-test("does not claim a shortcut or add a palette entry by default", () => {
+test("registers a session shortcut without adding a palette entry", () => {
   const { action, layer, calls } = setup();
-  assert.equal(action.bind, false);
+  assert.equal(action.bind, "ctrl+r");
   assert.equal(action.palette, undefined);
   assert.notEqual(layer.mode, "global");
   assert.equal(action.enabled(), true);
@@ -64,15 +64,13 @@ test("accepts a custom shortcut without changing the rename action", () => {
   }
 });
 
-test("allows the shortcut to be explicitly disabled", () => {
-  const { action } = setup({ keybind: false });
-  assert.equal(action.bind, false);
-  assert.equal(action.palette, undefined);
+test("requires a keybind option", () => {
+  assert.throws(() => setup({}), /keybind must be a non-empty shortcut string/);
 });
 
 test("rejects unsupported keybind option values", () => {
-  for (const keybind of [true, 42, null, [], {}, "", "   "]) {
-    assert.throws(() => setup({ keybind }), /keybind must be a non-empty shortcut string or false/);
+  for (const keybind of [false, true, 42, null, [], {}, "", "   "]) {
+    assert.throws(() => setup({ keybind }), /keybind must be a non-empty shortcut string/);
   }
 });
 

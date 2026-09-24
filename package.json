@@ -1,6 +1,6 @@
 {
   "name": "opencode-auto-rename-keybind",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Configure a keyboard shortcut for OpenCode 2's auto-rename.",
   "type": "module",
   "author": "David Roman",

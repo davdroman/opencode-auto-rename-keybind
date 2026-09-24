@@ -3,9 +3,9 @@ import { Plugin } from "@opencode/plugin/tui";
 export default Plugin.define({
   id: "auto-rename",
   setup(context) {
-    const keybind = context.options.keybind === undefined ? false : context.options.keybind;
-    if (keybind !== false && (typeof keybind !== "string" || keybind.trim() === "")) {
-      throw new TypeError("auto-rename: keybind must be a non-empty shortcut string or false");
+    const keybind = context.options.keybind;
+    if (typeof keybind !== "string" || keybind.trim() === "") {
+      throw new TypeError("auto-rename: keybind must be a non-empty shortcut string");
     }
 
     context.ui.slot({
