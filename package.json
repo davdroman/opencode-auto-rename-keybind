@@ -1,17 +1,17 @@
 {
-  "name": "@davdroman/opencode-auto-rename",
+  "name": "opencode-auto-rename-keybind",
   "version": "0.1.0",
-  "description": "A configurable keyboard shortcut for OpenCode 2's auto-rename.",
+  "description": "Configure a keyboard shortcut for OpenCode 2's auto-rename.",
   "type": "module",
   "author": "David Roman",
   "license": "MIT",
-  "homepage": "https://github.com/davdroman/opencode-auto-rename#readme",
+  "homepage": "https://github.com/davdroman/opencode-auto-rename-keybind#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davdroman/opencode-auto-rename.git"
+    "url": "git+https://github.com/davdroman/opencode-auto-rename-keybind.git"
   },
   "bugs": {
-    "url": "https://github.com/davdroman/opencode-auto-rename/issues"
+    "url": "https://github.com/davdroman/opencode-auto-rename-keybind/issues"
   },
   "exports": {
     "./tui": "./tui.js"

@@ -14,7 +14,7 @@ const hooks = registerHooks({
     return next(specifier, context);
   },
 });
-const { default: plugin } = await import("@davdroman/opencode-auto-rename/tui");
+const { default: plugin } = await import("opencode-auto-rename-keybind/tui");
 hooks.deregister();
 
 function setup(options = {}) {

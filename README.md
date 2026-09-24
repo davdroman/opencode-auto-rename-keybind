@@ -1,4 +1,4 @@
-# opencode-auto-rename
+# opencode-auto-rename-keybind
 
 OpenCode 2 introduces auto-rename for sessions based on their conversation, but it doesn't expose that action as a configurable keyboard shortcut. Its built-in rename shortcut opens the manual rename dialog instead.
 
@@ -16,7 +16,7 @@ Requires **OpenCode 2's CLI**. Add this to your `cli.json` to use **Ctrl+R**. Th
   },
   "plugins": [
     {
-      "package": "@davdroman/opencode-auto-rename",
+      "package": "opencode-auto-rename-keybind",
       "options": {
         "keybind": "ctrl+r"
       }
